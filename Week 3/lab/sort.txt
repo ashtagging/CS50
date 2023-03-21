@@ -1,0 +1,19 @@
+sort1 uses: Bubble Sort
+
+How do you know?: had by far the slowest times when sorting the files
+
+sort2 uses: Merge Sort
+
+How do you know?: had the fastest time when sorting the two text files below
+
+sort3 uses: Selection Sort
+
+How do you know?: Was significantly faster than Sort1 when sorting the two 50000.txt files, but not as fast as sort2
+
+time ./sort1 reversed50000.txt  5.395s
+time ./sort2 reversed50000.txt  0.316s
+time ./sort3 reversed50000.txt  3.073s
+
+time ./sort1 random50000.txt   7.356s
+time ./sort2 random50000.txt   0.365s
+time ./sort3 random50000.txt   2.924s
