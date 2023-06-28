@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
+    <title>Stock Quote</title>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
 </head>
@@ -33,33 +33,12 @@
         </div>
       </header>
     <div class="container">
-        <h1 class="mt-5">Portfolio</h1>
+        <h1 class="mt-5">Stock Quote</h1>
         <div class="mt-4">
-            <h3>Cash Balance: {{ cash | usd }}</h3>
-            <h3>Total Portfolio Value: {{ total_value | usd }}</h3>
+            <h3>Symbol: {{ stock.symbol }}</h3>
+            <h4>Name: {{ stock.name }}</h4>
+            <h4>Price: {{ stock.price | usd }}</h4>
         </div>
-        <table class="table mt-4">
-            <thead>
-                <tr>
-                    <th>Symbol</th>
-                    <th>Name</th>
-                    <th>Shares</th>
-                    <th>Price</th>
-                    <th>Total Value</th>
-                </tr>
-            </thead>
-            <tbody>
-                {% for stock in stocks %}
-                <tr>
-                    <td>{{ stock.symbol }}</td>
-                    <td>{{ stock.name }}</td>
-                    <td>{{ stock.shares }}</td>
-                    <td>{{ stock.price | usd }}</td>
-                    <td>{{ stock.total_value | usd }}</td>
-                </tr>
-                {% endfor %}
-            </tbody>
-        </table>
     </div>
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
